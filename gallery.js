@@ -417,6 +417,7 @@ var gallery = {
                 if (err){
                   util.inspect(err);
                   res.send('error generating thumb');
+                  return;
                 }
                 res.contentType('image/jpg');
                 res.end(binary, 'binary');
